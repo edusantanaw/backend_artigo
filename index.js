@@ -4,6 +4,9 @@ const app = express()
 const articles = require('./routes/articleRoutes')
 const user = require('./routes/userRoutes')
 
+app.get('/', (req, res)=>{
+    return res.json({message: 'home'})
+})
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(cors({ credentials: true, origin: 'https://sistema-de-artigos.netlify.app'}))
