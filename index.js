@@ -4,11 +4,12 @@ const app = express()
 const articles = require('./routes/articleRoutes')
 const user = require('./routes/userRoutes')
 
+
+const myOrigin = 'https://sistema-de-artigos.netlify.app'
 app.use((req, res, next)=> {
-    res.header("Access-Control-Allow-Origin", '*')
     res.header("Access-Control-Allow-Methods", "GET,OPTIONS, POST, PUT, DELETE")
     res.header("Access-Control-Allow-Headers", "*")
-    app.use(cors());
+    app.use(cors({credentials: true, origin: `${myOrigin}`));
     next();
 
 })
