@@ -11,9 +11,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(cors({ 
     credentials: true, 
-    origins: 'https://sistema-de-artigos.netlify.app/',
-    methods: '*',
-    headers: '*'
+    origins: '*'
 }))
 app.use(express.static('public'))
 app.use('/article', articles)
