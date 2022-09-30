@@ -9,10 +9,9 @@ app.get('/', (req, res)=>{
 })
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
-app.use(cors({ 
-    credentials: true, 
-    origins: '*'
-}))
+app.use(cors({
+  origin: true
+});
 app.use(express.static('public'))
 app.use('/article', articles)
 app.use('/user', user)
