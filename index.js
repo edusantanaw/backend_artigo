@@ -4,12 +4,9 @@ const app = express()
 const articles = require('./routes/articleRoutes')
 const user = require('./routes/userRoutes')
 
-app.get('/', (req, res)=>{
-    return res.json({message: 'home'})
-})
+app.use(cors());
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
-app.use(cors());
 app.use(express.static('public'))
 app.use('/article', articles)
 app.use('/user', user)
