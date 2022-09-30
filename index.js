@@ -9,7 +9,7 @@ const myOrigin = 'https://sistema-de-artigos.netlify.app'
 app.use((req, res, next)=> {
     res.header("Access-Control-Allow-Methods", "GET,OPTIONS, POST, PUT, DELETE")
     res.header("Access-Control-Allow-Headers", "*")
-    app.use(cors({credentials: true, origin: `${myOrigin}`));
+    app.use(cors({credentials: true, origin: `${myOrigin}`}));
     next();
 
 })
