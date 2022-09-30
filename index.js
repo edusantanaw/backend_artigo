@@ -5,7 +5,7 @@ const articles = require('./routes/articleRoutes')
 const user = require('./routes/userRoutes')
 
 app.use((req, res, next)=> {
-    res.header("Access-Control-Allow-Origin", true)
+    res.header("Access-Control-Allow-Origin", '*')
     res.header("Access-Control-Allow-Methods", "GET,OPTIONS, POST, PUT, DELETE")
     res.header("Access-Control-Allow-Headers", "*")
     app.use(cors());
