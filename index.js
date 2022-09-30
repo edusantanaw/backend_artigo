@@ -11,7 +11,7 @@ app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.use(cors({ 
     credentials: true, 
-    origin: 'https://sistema-de-artigos.netlify.app/',
+    origins: 'https://sistema-de-artigos.netlify.app/',
     methods: '*',
     headers: '*'
 }))
